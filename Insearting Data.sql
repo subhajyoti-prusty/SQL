@@ -87,3 +87,24 @@ create table Primary_Key_Table(
 );
 
 desc Primary_Key_Table;
+
+insert into Primary_Key_Table(Id,Name,age)
+values(1,'Subha',20);
+
+insert into Primary_Key_Table(Id,Name,age)
+values(2,'Nitesh',19),(3,'Unohana',25);
+
+select * from Primary_Key_Table;
+
+create table Auto_Incriment_Primary_Key_Table(
+	Id int auto_increment,
+    Name varchar(20) not null default 'No Name',
+    Age int not null default 0,
+    primary key(Id)
+);
+
+insert into Auto_Incriment_Primary_Key_Table(Name,age)
+values('Andrews',24),('Oliver',21),('Peter',20),('Binks',26);
+
+select * from Auto_Incriment_Primary_Key_Table;
+desc Auto_Incriment_Primary_Key_Table;
