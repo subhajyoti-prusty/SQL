@@ -59,3 +59,47 @@ select substr(author_lname,1,1) as LNAME ,author_lname from books;
 select concat(substr(title,1,10),'...') as Short_Title from books;
 
 select concat(substr(author_fname,1,1),'.',author_lname) as Short_Name from books;
+
+-- REPLACE()
+select replace('Hello World', 'Hell', '#%&');
+
+select replace(title, ' ','-') as New_Title from books;
+
+-- REVERSE()
+select reverse("HELLO");
+
+select reverse(author_fname) from books;
+
+select concat(author_fname, ' ', reverse(author_fname)) from books;
+
+-- Char_Length()
+SELECT CHAR_LENGTH('Hello World');
+ 
+SELECT CHAR_LENGTH(title) as length, title FROM books;
+ 
+SELECT author_lname, CHAR_LENGTH(author_lname) AS 'length' FROM books;
+ 
+SELECT CONCAT(author_lname, ' is ', CHAR_LENGTH(author_lname), ' characters long') FROM books;
+
+-- UPPER() LOWER()
+select upper('hello');
+select lower('HELLO');
+
+SELECT CONCAT('MY FAVORITE BOOK IS ', UPPER(title)) FROM books;
+ 
+SELECT CONCAT('MY FAVORITE BOOK IS ', LOWER(title)) FROM books;
+
+-- INSERT()
+SELECT INSERT('Hello Bobby', 6, 0, 'There'); 
+ 
+-- LEFT()
+SELECT LEFT('omghahalol!', 3);
+ 
+-- RIGHT()
+SELECT RIGHT('omghahalol!', 4);
+ 
+-- REPLACE()
+SELECT REPEAT('ha', 4);
+ 
+-- TRIM()
+SELECT TRIM('  pickle  ');
